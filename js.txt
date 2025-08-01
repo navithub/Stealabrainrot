@@ -1,0 +1,65 @@
+function login() {
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+
+  if (!user || !pass) {
+    alert("❌ Please fill in both username and password!");
+    return;
+  }
+
+  if (localStorage.getItem(user)) {
+    const data = JSON.parse(localStorage.getItem(user));
+    if (data.password === pass) {
+      document.querySelector(".login-container").classList.add("hidden");
+      document.getElementById("welcome").classList.remove("hidden");
+      document.getElementById("showName").innerText = `Hello ${user}!`;
+      sessionStorage.setItem("loggedInUser", user);
+    } else {
+      alert("❌ Wrong password!");
+    }
+  } else {
+    alert("❌ Account not found!");
+  }
+}
+
+function createAccount() {
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+
+  if (!user || !pass) {
+    alert("❌ Please fill in all fields!");
+    return;
+  }
+
+  if (localStorage.getItem(user)) {
+    alert("⚠️ Account already exists!");
+    return;
+  }
+
+  localStorage.setItem(user, JSON.stringify({ password: pass }));
+  alert("✅ Account created! You can now log in.");
+}
+
+function goToDashboard() {
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("dashboard").classList.remove("hidden");
+  const user = sessionStorage.getItem("loggedInUser");
+  document.getElementById("profileName").innerText = user;
+}
+
+function logout() {
+  sessionStorage.removeItem("loggedInUser");
+  location.reload();
+}
+
+function openSell() {
+  alert("📦 Sell system coming soon!");
+}
+
+function openTrade() {
+  alert("🔁 Trade system coming soon!");
+}
+
+function openMessage() {
+  alert("💬 Messaging system coming soon!");
+}

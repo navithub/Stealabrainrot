@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steal a Brainrot</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="login-container">
+    <h1 class="rainbow-text">Steal a Brainrot</h1>
+    <p class="credit">Created by NAVIT 🇰🇭</p>
+    
+    <input id="username" type="text" placeholder="Roblox Username"/>
+    <input id="password" type="password" placeholder="Password"/>
+
+    <button onclick="login()">Login</button>
+    <button onclick="createAccount()">Create Account</button>
+
+    <p class="rule-text">📜 Use your real Roblox username. No scamming. No hacking. Use middleman!</p>
+    
+    <div id="welcome" class="welcome-msg hidden">
+      <h2>🎉 Welcome to Steal a Brainrot</h2>
+      <p id="showName"></p>
+      <button onclick="goToDashboard()">Enter Site</button>
+    </div>
+  </div>
+
+  <div id="dashboard" class="hidden">
+    <h2>🎮 Dashboard</h2>
+    <p>👤 Profile: <span id="profileName"></span></p>
+    <button onclick="openSell()">🛍️ Post to Sell</button>
+    <button onclick="openTrade()">🔁 Trade Items</button>
+    <button onclick="openMessage()">💬 Message</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
