@@ -3,68 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steal a Brainrot</title>
+  <title>Gift Surprise</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="loading-screen" id="loading">
-    <h1>🧠 Tralalero Tralala...</h1>
-    <div class="loader"></div>
+  <h1>Click here for gift 🎁</h1>
+  <button id="giftBtn">Click Me</button>
+
+  <div id="jumpscare">
+    <img src="https://files.catbox.moe/g0myi7.jpeg" alt="Jump Scare">
   </div>
 
-  <div id="main" style="display:none">
-    <header>
-      <h1>Steal a Brainrot</h1>
-      <p>👑 Created by NAVIT | 🇰🇭 Cambodia</p>
-    </header>
-
-    <div class="login-box">
-      <h2>Login or Create Account</h2>
-      <input type="text" id="username" placeholder="Roblox Username" />
-      <input type="password" id="password" placeholder="Password" />
-      <button onclick="login()">🔓 Login / Sign Up</button>
-      <p class="note">✨ Tutorial supports all languages | No hack, no scam | Use middleman!</p>
-    </div>
-
-    <div id="dashboard" class="hidden">
-      <h2>Welcome, <span id="displayUser"></span> 👋</h2>
-      <p>✅ Let’s sell, buy or trade your brainrot items!</p>
-
-      <div class="menu">
-        <button onclick="showMenu('sell')">🛍️ Sell</button>
-        <button onclick="showMenu('buy')">💰 Buy</button>
-        <button onclick="showMenu('trade')">♻️ Trade</button>
-        <button onclick="showMenu('message')">✉️ Message</button>
-      </div>
-
-      <div id="menu-sell" class="hidden">
-        <h3>Post to Sell</h3>
-        <input placeholder="Item Title" />
-        <input placeholder="Price in Robux" />
-        <textarea placeholder="Describe your item"></textarea>
-        <button>🧠 Post</button>
-      </div>
-
-      <div id="menu-buy" class="hidden">
-        <h3>Search for items to Buy</h3>
-        <input placeholder="Search..." />
-      </div>
-
-      <div id="menu-trade" class="hidden">
-        <h3>Trade Center</h3>
-        <input placeholder="What you offer?" />
-        <input placeholder="What you want?" />
-        <button>♻️ Post Trade</button>
-      </div>
-
-      <div id="menu-message" class="hidden">
-        <h3>📩 Messages</h3>
-        <textarea placeholder="Send message to seller..."></textarea>
-        <button>Send</button>
-      </div>
-    </div>
-  </div>
-
+  <audio id="scareSound" src="https://files.catbox.moe/cbjoky.mp3" loop></audio>
   <script src="script.js"></script>
 </body>
 </html>
